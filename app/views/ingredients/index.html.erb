@@ -13,4 +13,8 @@
     <div><%= ingredient.measurement %></div>
     <div><%= ingredient.cost %></div>
   </div>
+  <div class='editable'>
+        <%= button_to "Edit", edit_ingredient_path(ingredient.id), :method=>'get' %>
+        <%= button_to "Delete", ingredient, :method=>'delete', :confirm=>"Are you sure?" %>
+      </div>
   <% end %>
